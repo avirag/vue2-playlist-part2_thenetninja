@@ -21,10 +21,15 @@ Vue.component('greeting', {
 var one = new Vue({
   el: '#vue-app-one',
   data: {
-    title: 'Vue App One'
+    title: 'Vue App One',
+    output: 'Yout fav food'
   },
   methods: {
+    readRefs: function() {
+      console.log(this.$refs.test.innerText);
 
+      this.output = this.$refs.refExample.value;
+    }
   },
   computed: {
     greet: function() {
